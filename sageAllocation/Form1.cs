@@ -32,7 +32,7 @@ namespace sageAllocation
             string prd = ClsRefData.alPeriod;
             string yr = ClsRefData.alYear;
 
-            string control_acc = "01-1-66-001";
+            string control_acc = "01-1-66-001"; // this should be included as a setting 
             //string batchNo = "SJA080";
             string[] itemNumber = new string[31];
             Double[] itemAmount = new Double[31];
@@ -393,23 +393,6 @@ namespace sageAllocation
         {
             ClsRefData.yrMon();
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            //MessageBox.Show("Year  :  " + ClsRefData.alYear + "    Month   :  " + ClsRefData.alPeriod + "  Batch Number :  " + ClsRefData.alBatch);
-            DateTime date = DateTime.Now;
-      
-            DateTime firstOfNextMonth = new DateTime(date.Year, date.Month, 1).AddMonths(1);
-            DateTime lastOfThisMonth = firstOfNextMonth.AddDays(-1);
-
-            //MessageBox.Show("First day    : " + firstOfNextMonth + "  Last day  : " + lastOfThisMonth);
-
-        }
-
-      
-
-               
-
 
     }
 }
